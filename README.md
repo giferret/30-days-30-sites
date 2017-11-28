@@ -5,5 +5,5 @@ Sucscribe [here](http://www.subscribepage.com/30days30sites)
 
 Date started: 28-11-2017
 
-**###CHALLENGES:**
+**### CHALLENGES:**
 * DAY 1 - EVENTS PAGE: 

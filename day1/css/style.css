@@ -1,0 +1,86 @@
+html,
+body {
+	height: 100%;
+	/*margin: 0;*/
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+	line-height: 1.6;
+}
+
+.bg-img-1 {
+	background-image: url(../img/bg-img1.jpg);
+	min-height: 100vh;
+}
+
+.bg-img-2 {
+	background-image: url(../img/bg-img2.jpg);
+	min-height: 100vh;
+}
+
+.bg-img-3 {
+	background-image: url(../img/bg-img3.jpg);
+	min-height: 100vh;
+}
+
+.bg-img-4 {
+	background-image: url(../img/bg-img4.jpg);
+	min-height: 100vh;
+}
+
+.bg-img-5 {
+	background-image: url(../img/bg-img5.jpeg);
+	min-height: 100vh;
+}
+
+.bg-img-6 {
+	background-image: url(../img/bg-img6.jpeg);
+	min-height: 100vh;
+}
+
+.bg-img-7 {
+	background-image: url(../img/bg-img7.jpeg);
+	min-height: 100vh;
+}
+
+.bg-img-8 {
+	background-image: url(../img/bg-img8.jpeg);
+	min-height: 100vh;
+}
+
+.bg-img-9 {
+	background-image: url(../img/bg-img9.jpeg);
+	min-height: 100vh;
+}
+
+.bg-img-3 {
+	background-image: url(../img/bg-img3.jpg);
+	min-height: 100vh;
+}
+
+.bg-img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.section {
+	max-width: 960px;
+	margin: 0 auto;
+	font-size: 1.8rem;
+	padding: 5%;
+}
+

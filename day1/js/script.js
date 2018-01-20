@@ -20,13 +20,9 @@ function countDown() {
 	minutes %= 60
 	seconds %= 60;
 
-
-
 	setTimeout(countDown, 1000);
 
-
-	console.log(days);
-	console.log(hours);
-	console.log(minutes);
-	console.log(seconds);
+	document.getElementById('countdown').innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
 }
+
+countDown();

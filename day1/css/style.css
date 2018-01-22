@@ -32,23 +32,23 @@ body {
 }
 
 .bg-img-5 {
-	background-image: url(../img/bg-img5.jpeg);
+	background-image: url(../img/bg-img5.jpg);
 }
 
 .bg-img-6 {
-	background-image: url(../img/bg-img6.jpeg);
+	background-image: url(../img/bg-img6.jpg);
 }
 
 .bg-img-7 {
-	background-image: url(../img/bg-img7.jpeg);
+	background-image: url(../img/bg-img7.jpg);
 }
 
 .bg-img-8 {
-	background-image: url(../img/bg-img8.jpeg);
+	background-image: url(../img/bg-img8.jpg);
 }
 
 .bg-img-9 {
-	background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)) ,url(../img/bg-img9.jpeg);
+	background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)) ,url(../img/bg-img9.jpg);
 }
 
 .bg-img-3 {
@@ -196,7 +196,7 @@ footer a {
 	                                  rgba(255,255,255,.9) 0%,
 	                                  rgba(255,255,255,.9) 50%,
 	                                  transparent 50%),
-	                                  url(../img/bg-img1.jpg);
+	                                  url(../img/popup-img.jpg);
 	background-size: 100%;
 	display: flex;
 	justify-content: center;

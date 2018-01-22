@@ -167,6 +167,8 @@ header h1 {
 
 footer {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	flex-flow: row wrap;
 	justify-content: space-between;
 	/*padding: .5rem .8rem;*/

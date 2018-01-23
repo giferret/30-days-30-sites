@@ -103,6 +103,24 @@ h4 {
 	color: #9ab87a;
 }
 
+.btn,
+.btn:link,
+.btn:focus,
+.btn:active {
+	text-transform: uppercase;
+	padding: 1.5rem 4rem;
+	border-radius: 10rem;
+	font-size: 1.6rem;
+	background-color: #55c57a;
+	color: #fff;
+}
+
+button {
+	border: none;
+	cursor: pointer;
+	/*outline: none;*/
+}
+
 p {
 	color: #555f61;
 	font-size: 1.6rem;
@@ -111,7 +129,10 @@ p {
 
 a {
 	text-decoration: none;
-	/*color: #fff;*/
+}
+
+footer a {
+	border-bottom: 1px dashed rgba(0,0,0,.3);
 }
 
 header {
@@ -123,6 +144,23 @@ header {
 header h1 {
 	color: #fff;
 	font-size: 4.8rem;
+}
+
+.section-engaged {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.section-engaged a {
+	margin-top: 2rem;
+}
+
+.section-engaged p {
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	/*padding: 1.5rem;*/
 }
 
 .section-weekend {
@@ -190,6 +228,27 @@ footer a {
 	left: 0;
 	background-color: rgba(0,0,0,.9);
 	z-index: 999;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .5s;
+}
+
+.popup:target {
+	opacity: 1;
+	visibility: visible;
+}
+
+.popup-close:link,
+.popup-close:visited {
+	color: #fff;
+	font-size: 3.2rem;
+	position: absolute;
+	top: 0;
+	right: 2rem;
+	/*background-color: #fff;*/
+	/*border-radius:50%;*/
+	padding: .5rem;
+	display: inline-block;
 }
 
 .popup-content {
@@ -200,14 +259,115 @@ footer a {
 	                                  transparent 50%),
 	                                  url(../img/popup-img.jpg);
 	background-size: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	position: absolute;
 	left: 50%;
 	top: 40%;
-	transform: translate(-50%, -50%);
-	height: 50vh;
+	transform: translate(-50%, -50%) scale(.25);
+	/*height: 50vh;*/
 	margin: 5rem;
-	height: 50rem;
+	height: auto;
+	opacity: 0;
+	transition: all .5s .2s;
 }
+
+.popup:target .popup-content {
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.book-form {
+	margin-top: 5rem;
+	/*margin-left: 2rem;*/
+	width: 30%;
+	padding: 6rem;
+	/*position: relative;*/
+}
+
+.form-input {
+	font-size: 1.5rem;
+	padding: 1.5rem 2rem;
+	border-radius: 2px;
+	background-color: rgba(255,255,255,.5);
+	border: none;
+	display: block;
+	width: 90%;
+	border-bottom: 3px solid transparent;
+}
+
+.form-input:focus {
+	border-bottom: 3px solid #9ab87a;
+	outline: none;
+	box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+}
+
+.form-group:not(:last-child) {
+	margin-bottom: 2rem;
+}
+
+input:focus:invalid {
+	border-bottom: 3px solid #c00;
+}
+
+.form-label {
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-left: 2rem;
+	margin-top: .7rem;
+	display: block;
+	transition: all .3s;
+}
+
+.form-input:placeholder-shown + .form-label {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-4rem);
+}
+
+.form-radio {
+	width: 49%;
+	display: inline-block;
+	/*display: flex;*/
+}
+
+.radio-label {
+	font-size: 1.6rem;
+	cursor: pointer;
+	position: relative;
+	padding-left: 4.5rem;
+}
+
+.radio-button {
+	height: 2.2rem;
+	width: 2.2rem;
+	border: 5px solid blue;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: -.8rem;
+
+}
+
+.radio-input {
+	display: none;
+}
+
+.radio-button::after {
+	height: 1.5rem;
+	width: 1.5rem;
+	content: '';
+	display: block;
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: yellow;
+	opacity: 0;
+	transition: opacity .2s;
+}
+
+.radio-input:checked ~ .radio-label .radio-button::after {
+	opacity: 1;
+}
+

@@ -26,3 +26,11 @@ function countDown() {
 }
 
 countDown();
+
+var submit = document.querySelector('button');
+submit.addEventListener('submit', changeText);
+
+function changeText(e) {
+	e.preventDefault;
+	document.getElementById('book-forms').innerHTML = 'Thanks for Registering!';
+}

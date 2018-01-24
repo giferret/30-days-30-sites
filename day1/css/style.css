@@ -12,7 +12,7 @@ html {
 body {
 	line-height: 1.6;
 	font-family: 'Open Sans', sans-serif;
-    color: #6d6363;
+	color: #6d6363;
 }
 
 .bg-img-1 {
@@ -152,6 +152,37 @@ header h1 {
 	align-items: center;
 }
 
+#btt {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	height: 50px;
+	width: 50px;
+	font-size: xx-large;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 0;
+	outline: 0;
+	padding: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 0;
+	background-color: #fff;
+	box-shadow: 2px 4px 16px rgba(0, 0, 0, .3);
+	opacity: 0;
+	transform: scale(0);
+	visibility: hidden;
+	transition: all .3s;
+}
+
+#btt.show {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1);
+}
+
+
 .section-engaged a {
 	margin-top: 2rem;
 }
@@ -254,10 +285,10 @@ footer a {
 .popup-content {
 	width: 70%;
 	background-image: linear-gradient(105deg,
-	                                  rgba(255,255,255,.9) 0%,
-	                                  rgba(255,255,255,.9) 50%,
-	                                  transparent 50%),
-	                                  url(../img/popup-img.jpg);
+		rgba(255,255,255,.9) 0%,
+		rgba(255,255,255,.9) 50%,
+		transparent 50%),
+	url(../img/popup-img.jpg);
 	background-size: 100%;
 	position: absolute;
 	left: 50%;

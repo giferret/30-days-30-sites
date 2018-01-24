@@ -34,3 +34,7 @@ function changeText(e) {
 	e.preventDefault;
 	document.getElementById('book-forms').innerHTML = 'Thanks for Registering!';
 }
+
+
+	
+	

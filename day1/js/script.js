@@ -7,7 +7,7 @@ function getYear() {
 window.onload = getYear();
 
 function countDown() {
-	var weddingDate = new Date("February 3, 2018 10:00:00");
+	var weddingDate = new Date("January 26, 2018 16:25:00");
 	var now = new Date();
 	var timeDiff = weddingDate.getTime() - now.getTime();
 
@@ -20,7 +20,12 @@ function countDown() {
 	minutes %= 60
 	seconds %= 60;
 
-	setTimeout(countDown, 1000);
+	var timer = setTimeout(countDown, 1000);
+
+	if(timeDiff <= 0) {
+		clearTimeout(timer);
+		return document.getElementById('countdown').innerHTML = 'Emma and Raymond have tied the knot!';
+	}
 
 	document.getElementById('countdown').innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
 }

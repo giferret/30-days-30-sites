@@ -402,3 +402,7 @@ input:focus:invalid {
 	opacity: 1;
 }
 
+.bpopup h4 {
+	width: 100%;
+}
+

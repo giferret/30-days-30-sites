@@ -4,10 +4,10 @@ function getYear() {
 	document.getElementById('year').innerHTML = year;
 }
 
-getYear();
+window.onload = getYear();
 
 function countDown() {
-	var weddingDate = new Date("December 1, 2018 10:00:00");
+	var weddingDate = new Date("February 3, 2018 10:00:00");
 	var now = new Date();
 	var timeDiff = weddingDate.getTime() - now.getTime();
 
@@ -25,19 +25,17 @@ function countDown() {
 	document.getElementById('countdown').innerHTML = days + ' days ' + hours + ' hours ' + minutes + ' minutes ' + seconds + ' seconds';
 }
 
-countDown();
+window.onload = countDown();
 
 var submit = document.querySelector('button');
-submit.addEventListener('submit', changeText);
+submit.addEventListener('click', changeText);
 
 function changeText(e) {
-	e.preventDefault;
+	e.preventDefault();
 	document.getElementById('book-forms').innerHTML = 'Thanks for Registering!';
 }
 
 
-	
-	
 var html, body, sttbtn;
 
 	window.onload = function() {

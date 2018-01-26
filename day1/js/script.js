@@ -1,3 +1,4 @@
+// COPYRIGHT YEAR
 function getYear() {
 	var date = new Date();
 	var year = date.getFullYear();
@@ -6,8 +7,10 @@ function getYear() {
 
 window.onload = getYear();
 
+
+// COUNTDOWN TIMER
 function countDown() {
-	var weddingDate = new Date("January 26, 2018 16:25:00");
+	var weddingDate = new Date("January 26, 2018 16:57:59");
 	var now = new Date();
 	var timeDiff = weddingDate.getTime() - now.getTime();
 
@@ -32,67 +35,72 @@ function countDown() {
 
 window.onload = countDown();
 
-var submit = document.querySelector('button');
-submit.addEventListener('click', changeText);
-
-function changeText(e) {
-	e.preventDefault();
-	document.getElementById('book-forms').innerHTML = 'Thanks for Registering!';
-}
 
 
+
+// var submit = document.querySelector('button');
+// submit.addEventListener('click', changeText);
+
+// function changeText(e) {
+// 	e.preventDefault();
+// 	document.getElementById('book-forms').innerHTML = 'Thanks for Registering!';
+// }
+
+
+
+// BACK TO TOP BUTTON
 var html, body, sttbtn;
 
-	window.onload = function() {
-		html = document.documentElement;
-		body = document.body;
-		sttbtn = document.getElementById('btt');
+window.onload = function() {
+	html = document.documentElement;
+	body = document.body;
+	sttbtn = document.getElementById('btt');
+}
+
+window.onscroll = stt;
+
+function stt() {
+	var windowInnerHeightX2 = 2 * innerHeight;
+	if (body.scrollTop > windowInnerHeightX2 || html.scrollTop > windowInnerHeightX2) {
+		sttbtn.classList.add('show');
 	}
-
-	window.onscroll = stt;
-
-	function stt() {
-		var windowInnerHeightX2 = 2 * innerHeight;
-		if (body.scrollTop > windowInnerHeightX2 || html.scrollTop > windowInnerHeightX2) {
-			sttbtn.classList.add('show');
-		}
-		else {
-			sttbtn.classList.remove('show');
-		}
+	else {
+		sttbtn.classList.remove('show');
 	}
+}
 
-	function sttop(totalTime, easingPower) {
-		var timeInterval = 1;
-		var scrollTop = Math.round(body.scrollTop || html.scrollTop);
+function sttop(totalTime, easingPower) {
+	var timeInterval = 1;
+	var scrollTop = Math.round(body.scrollTop || html.scrollTop);
 
-		var timeLeft = totalTime;
-		var scrollByPixel = setInterval(function() {
-			var percentSpent = (totalTime - timeLeft) / totalTime;
-			if (timeLeft >= 0) {
-				var newscroll = scrollTop * (1 - ease(percentSpent, easingPower));
+	var timeLeft = totalTime;
+	var scrollByPixel = setInterval(function() {
+		var percentSpent = (totalTime - timeLeft) / totalTime;
+		if (timeLeft >= 0) {
+			var newscroll = scrollTop * (1 - ease(percentSpent, easingPower));
 
-				body.scrollTop = newscroll;
-				html.scrollTop = newscroll;
-				timeLeft--;
-			}
-
-			else {
-				clearInterval(scrollByPixel);
-			}
-		}, timeInterval);
-	}
-
-	function ease(t, power) {
-		if (t < 0.5) {
-			return  0.5 * Math.pow(2 * t, power)
+			body.scrollTop = newscroll;
+			html.scrollTop = newscroll;
+			timeLeft--;
 		}
 
 		else {
-			return  0.5 * ( 2 - Math.pow(2 * (1 - t), power));
+			clearInterval(scrollByPixel);
 		}
+	}, timeInterval);
+}
+
+function ease(t, power) {
+	if (t < 0.5) {
+		return  0.5 * Math.pow(2 * t, power)
 	}
-	
-	document.getElementById('btt').addEventListener('click', function() {
-		sttop(300, 3);
-	});
-	
+
+	else {
+		return  0.5 * ( 2 - Math.pow(2 * (1 - t), power));
+	}
+}
+
+document.getElementById('btt').addEventListener('click', function() {
+	sttop(300, 3);
+});
+

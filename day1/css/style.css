@@ -240,7 +240,6 @@ footer {
 	align-items: center;
 	flex-flow: row wrap;
 	justify-content: space-between;
-	/*padding: .5rem .8rem;*/
 	text-transform: uppercase;
 }
 
@@ -276,8 +275,6 @@ footer a {
 	position: absolute;
 	top: 0;
 	right: 2rem;
-	/*background-color: #fff;*/
-	/*border-radius:50%;*/
 	padding: .5rem;
 	display: inline-block;
 }
@@ -294,7 +291,6 @@ footer a {
 	left: 50%;
 	top: 40%;
 	transform: translate(-50%, -50%) scale(.25);
-	/*height: 50vh;*/
 	margin: 5rem;
 	height: auto;
 	opacity: 0;
@@ -308,10 +304,8 @@ footer a {
 
 .book-form {
 	margin-top: 5rem;
-	/*margin-left: 2rem;*/
 	width: 30%;
 	padding: 6rem;
-	/*position: relative;*/
 }
 
 .form-input {
@@ -357,7 +351,6 @@ input:focus:invalid {
 .form-radio {
 	width: 49%;
 	display: inline-block;
-	/*display: flex;*/
 }
 
 .radio-label {
@@ -370,7 +363,7 @@ input:focus:invalid {
 .radio-button {
 	height: 2.2rem;
 	width: 2.2rem;
-	border: 5px solid blue;
+	border: 5px solid #9ab87a;
 	border-radius: 50%;
 	display: inline-block;
 	position: absolute;
@@ -393,7 +386,7 @@ input:focus:invalid {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: yellow;
+	background-color: #9ab87a;
 	opacity: 0;
 	transition: opacity .2s;
 }
@@ -402,7 +395,7 @@ input:focus:invalid {
 	opacity: 1;
 }
 
-.bpopup h4 {
+.popup h4 {
 	width: 100%;
 }
 

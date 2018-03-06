@@ -1,0 +1,23 @@
+{
+  "name": "30-days-30-sites",
+  "version": "1.0.0",
+  "description": "A challenge to help you master HTML and CSS to build simple and complex webpages in 30 days or more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peoray/30-days-30-sites.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS"
+  ],
+  "author": "Emmanuel Raymond",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peoray/30-days-30-sites/issues"
+  },
+  "homepage": "https://github.com/peoray/30-days-30-sites#readme"
+}

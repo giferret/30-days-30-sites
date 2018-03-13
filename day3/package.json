@@ -1,0 +1,11 @@
+{
+  "name": "day2-tourism-webpage",
+  "version": "1.0.0",
+  "description": "Day 2 challenge - Create a landing page for a tourism company",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emmanuel Raymond",
+  "license": "MIT"
+}

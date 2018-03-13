@@ -1,7 +1,7 @@
 {
-  "name": "day2-tourism-webpage",
+  "name": "day1-event-webpage",
   "version": "1.0.0",
-  "description": "Day 2 challenge - Create a landing page for a tourism company",
+  "description": "Day 1 challenge - Create a webpage that showcase an event e.g. Birthday, Wedding, etc. I crated a wedding landing page.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

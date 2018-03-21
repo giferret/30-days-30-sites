@@ -1,0 +1,44 @@
+.featured {
+  display: grid;
+  justify-content: center;
+  grid-column: 1 / -1;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8rem 0;
+
+  &__text {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    grid-column-gap: 1.5rem;
+    font-size: 2.4rem;
+    margin-top: -3rem;
+
+    &::before,
+    &::after {
+      content: '';
+      height: 1px;
+      display: block;
+      background-color: currentColor;
+      opacity: 0.3;
+    }
+  }
+
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(min-content, 1fr));
+    grid-column-gap: 3rem;
+    justify-items: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: minmax(min-content, max-content);
+      grid-row-gap: 3rem;
+    }
+
+    img {
+      height: 2.5rem;
+      filter: brightness(100%);
+    }
+  }
+}

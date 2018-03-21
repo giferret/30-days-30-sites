@@ -1,0 +1,13 @@
+.footer {
+  background-color: lightslategray;
+  grid-column: 1 / -1;
+  font-size: 2.4rem;
+  text-align: center;
+  color: $color-text-white;
+  padding: 3rem 0;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 1.2rem;
+  }
+}

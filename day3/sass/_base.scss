@@ -1,10 +1,51 @@
+// COLOR VARIABLES
+$color-text-grey: #444;
+$color-text-white: #fff;
+
+// Responsive Breakpoint
+$bp-large: 52em;
+$bp-medium: 41em;
+$bp-small: 37.5em;
+$bp-smallest: 25em;
+$bp-smallest-er: 18em;
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 *,
 *:before,
 *:after {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  color: $color-text-grey;
+  line-height: 1.5;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 90vh min-content repeat(4, 40vw) min-content min-content;
+  grid-template-columns: repeat(8, 1fr);
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-rows: 90vh min-content repeat(8, 40vw) min-content min-content;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-rows: 90vh min-content repeat(8, 70vw) min-content min-content;
+  }
+
+  @media only screen and (max-width: $bp-smallest-er) {
+    grid-template-rows: 90vh min-content repeat(8, 100vw) min-content min-content;
+  }
 }
